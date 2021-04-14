@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let user of users; let i = index" [ngClass]="{
+      'text-success': user.country === 'UK',
+      'text-primary': user.country === 'USA',
+      'text-danger': user.country === 'HK'
+    }">   {{ user.name }} ({{ user.country }})
+    </li>
+</ul>
